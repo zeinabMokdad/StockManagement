@@ -1,0 +1,36 @@
+﻿@inherits System.Web.WebPages.WebPage
+@RenderPage("~/Views/Shared/Shared.cshtml")
+
+<div ng-app="mainModule" ng-controller="SellProductManagementController" class="content-page">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-3">
+                <label>Name</label>
+                <input type="text" name="Name" ng-model="productName" />
+            </div>
+            <div class="col-lg-3">
+                <label>Phone Number</label>
+                <input type="text" name="Name" ng-model="phoneNumber" />
+            </div>
+            <div class="col-lg-3">
+                <label>Customer: </label>
+                <label>{{customerName}}</label>
+                @*<input type="text" name="Name" ng-model="customerName" />*@
+            </div>
+            <div class="col-lg-3">
+                <button ng-click="onSell()" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    Sell
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <sellproduct-grid on-ready="onSellProductGridReady"></sellproduct-grid>
+
+    <div class="row" ng-repeat="total in totalsByCurrency">
+        <div class="col-lg-12">
+            <span>{{total.currency}}: {{total.amount}}  </span>
+        </div>
+    </div>
+</div>

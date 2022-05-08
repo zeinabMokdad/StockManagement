@@ -1,0 +1,35 @@
+﻿<div ng-app="mainModule" ng-controller="CustomerEditorController" ng-hide="isLoading">
+    <div class="modal-header alert alert-success">
+        <button type="button" class="close" ng-click="onCancelClicked()">&times;</button>
+        <h4 class="modal-title" ng-show="edit">Edit Customer</h4>
+        <h4 class="modal-title" ng-show="!edit">Add Customer</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-6">
+                <label>First Name</label>
+                <input type="text" ng-model="FirstName" class="form-control" required />
+            </div>
+            <div class="col-lg-6">
+                <label>Last Name</label>
+                <input type="text" ng-model="LastName" class="form-control" required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Phone Number</label>
+                <input type="text" ng-model="PhoneNumber" class="form-control" required />
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button ng-click="onSaveClicked()" class="btn btn-success">
+            <span class="glyphicon glyphicon-floppy-save"></span>
+            Save
+        </button>
+        <button type="button" class="btn btn-danger" ng-click="onCancelClicked()">
+            <span class="glyphicon glyphicon-remove"></span>
+            Close
+        </button>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿<div ng-app="mainModule" ng-controller="ProductEditorController" ng-hide="isLoading">
+    <div class="modal-header alert alert-success">
+        <button type="button" class="close" ng-click="onCancelClicked()">&times;</button>
+        <h4 class="modal-title" ng-show="edit">Edit Product</h4>
+        <h4 class="modal-title" ng-show="!edit">Add Product</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Name</label>
+                <input type="text" ng-model="Name" class="form-control" required />
+            </div>
+            <div class="col-lg-4">
+                <label>Barcode</label>
+                <input type="text" ng-model="Barcode" class="form-control" required />
+            </div>
+            <div class="col-lg-4">
+                <label>Quantity </label>
+                <input type="number" min="1" ng-model="Quantity" class="form-control" required />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <label>Price</label>
+                <input type="number" min="0" ng-model="Price" class="form-control" required />
+            </div>
+            <div class="col-lg-4">
+                <label>Currency</label>
+                <currency-selector on-ready="onCurrencyReady"></currency-selector>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button ng-click="onSaveClicked()" class="btn btn-success">
+            <span class="glyphicon glyphicon-floppy-save"></span>
+            Save
+        </button>
+        <button type="button" class="btn btn-danger" ng-click="onCancelClicked()">
+            <span class="glyphicon glyphicon-remove"></span>
+            Close
+        </button>
+    </div>
+</div>

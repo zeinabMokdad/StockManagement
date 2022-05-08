@@ -1,0 +1,27 @@
+﻿@inherits System.Web.WebPages.WebPage
+@RenderPage("~/Views/Shared/Shared.cshtml")
+
+<div ng-app="mainModule" ng-controller="CurrencyManagementController" class="content-page">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-lg-3">
+                <label>Name</label>
+                <input type="text" name="Name" ng-model="currencyName" />
+            </div>
+            <div class="col-lg-3">
+                <button ng-click="onSearch()" class="btn btn-success">
+                    <span class="glyphicon glyphicon-search"></span>
+                    Search
+                </button>
+            </div>
+            <div class="col-lg-3">
+                <button ng-click="onAdd()" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    Add
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <currency-grid on-ready="onCurrencyGridReady"></currency-grid>
+</div>

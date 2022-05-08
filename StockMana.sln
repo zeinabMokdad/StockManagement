@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMana", "StockMana\StockMana.csproj", "{ABCB8E47-4B8B-4F6C-8524-D726B6A95746}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DB", "DB\DB.sqlproj", "{F29B92A7-F65B-4B4B-8600-F6975D62C502}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABCB8E47-4B8B-4F6C-8524-D726B6A95746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABCB8E47-4B8B-4F6C-8524-D726B6A95746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABCB8E47-4B8B-4F6C-8524-D726B6A95746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABCB8E47-4B8B-4F6C-8524-D726B6A95746}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F29B92A7-F65B-4B4B-8600-F6975D62C502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F29B92A7-F65B-4B4B-8600-F6975D62C502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F29B92A7-F65B-4B4B-8600-F6975D62C502}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F29B92A7-F65B-4B4B-8600-F6975D62C502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F29B92A7-F65B-4B4B-8600-F6975D62C502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F29B92A7-F65B-4B4B-8600-F6975D62C502}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+		SolutionGuid = {1367E810-CAC6-4726-B919-448B93B6314A}
+	EndGlobalSection
+EndGlobal

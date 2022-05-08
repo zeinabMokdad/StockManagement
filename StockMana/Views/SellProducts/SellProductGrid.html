@@ -1,0 +1,25 @@
+﻿<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Barcode</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Currency</th>
+        <th>Total Price</th>
+        <th>Actions</th>
+    </tr>
+    <tr ng-repeat="product in products">
+        <td>{{ product.Name }}</td>
+        <td>{{ product.Barcode }}</td>
+        <td>{{ product.Quantity }}</td>
+        <td>{{ product.UnitPrice }}</td>
+        <td>{{ product.CurrencyDescription }}</td>
+        <td>{{ product.TotalPrice }}</td>
+        <td>
+            <button ng-click="onRemove(product)" class="btn btn-success">
+                <span class="glyphicon glyphicon-remove"></span>
+                Remove
+            </button>
+        </td>
+    </tr>
+</table>
