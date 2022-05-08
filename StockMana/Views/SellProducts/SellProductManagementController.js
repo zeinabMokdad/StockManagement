@@ -11,7 +11,7 @@ function SellProductManagementController($scope, $q, ModalService, ProductManage
 
     function defineScope() {
         $scope.productName = null;
-        $scope.totalsByCurrency = [];
+        
         var customerId = null;
 
         $scope.onSellProductGridReady = function (api) {
@@ -38,7 +38,6 @@ function SellProductManagementController($scope, $q, ModalService, ProductManage
             }
             CustomerInvoiceManagementAPIService.addInvoice(invoice);
             sellproductGridAPI.clearData();
-            $scope.totalsByCurrency.length = 0;
             $scope.phoneNumber = null;
             customerId = null;
         }
@@ -48,12 +47,11 @@ function SellProductManagementController($scope, $q, ModalService, ProductManage
                 return;
 
             ProductManagementAPIService.getProductToSell(newval).then(function (response) {
-                console.log(response);
                 if (response != undefined && response.data != undefined) {
                     var product = { ID: response.data.ID, Name: response.data.Name, Barcode: response.data.Barcode, Quantity: response.data.Quantity, UnitPrice: response.data.Price, CurrencyDescription: response.data.CurrencyDescription, TotalPrice: response.data.Quantity * response.data.Price, CurrencyID: response.data.CurrencyID };
                     sellproductGridAPI.addProduct(product);
                     $scope.productName = null;
-                    updateTotals(product.CurrencyDescription, product.TotalPrice);
+                   
                 }
             });
         });
@@ -63,7 +61,6 @@ function SellProductManagementController($scope, $q, ModalService, ProductManage
                 return;
 
             CustomerManagementAPIService.getCustomerByPhoneNumber(newval).then(function (response) {
-                console.log(response);
                 if (response != undefined && response.data != undefined) {
                     $scope.customerName = response.data.FirstName + ' ' + response.data.LastName;
                     customerId = response.data.ID;
@@ -74,22 +71,6 @@ function SellProductManagementController($scope, $q, ModalService, ProductManage
                 }
             });
         });
-
-        function updateTotals(currency, price) {
-            if ($scope.totalsByCurrency.length == 0) {
-                $scope.totalsByCurrency.push({ currency: currency, amount: price });
-                return;
-            }
-
-            for (var x = 0; x < $scope.totalsByCurrency.length; x++) {
-                var currentItem = $scope.totalsByCurrency[x];
-                if (currentItem.currency == currency) {
-                    currentItem.amount += price;
-                    return;
-                }
-            }
-            $scope.totalsByCurrency.push({ currency: currency, amount: price });
-        }
     }
 }
 

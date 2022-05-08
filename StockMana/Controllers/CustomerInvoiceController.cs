@@ -1,8 +1,8 @@
-﻿using StockMana.Business;
-using StockMana.Entities;
+﻿using MyWebProject.Business;
+using MyWebProject.Entities;
 using System.Web.Http;
 
-namespace StockMana.Controllers
+namespace MyWebProject.Controllers
 {
     public class CustomerInvoiceController : ApiController
     {

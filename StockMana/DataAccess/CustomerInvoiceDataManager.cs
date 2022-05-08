@@ -1,7 +1,7 @@
-﻿using StockMana.Entities;
+﻿using MyWebProject.Entities;
 using Newtonsoft.Json;
 
-namespace StockMana.DataAccess
+namespace MyWebProject.DataAccess
 {
     public class CustomerInvoiceDataManager : BaseDataManager
     {

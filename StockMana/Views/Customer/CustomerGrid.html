@@ -1,21 +1,25 @@
-﻿<table class="table table-striped">
-    <tr>
-        <th>ID</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Phone Number</th>
-        <th>Actions</th>
-    </tr>
-    <tr ng-repeat="customer in customers">
-        <td>{{ customer.ID }}</td>
-        <td>{{ customer.FirstName }}</td>
-        <td>{{ customer.LastName }}</td>
-        <td>{{ customer.PhoneNumber }}</td>
-        <td>
-            <button ng-click="onEdit(customer)" class="btn btn-success">
-                <span class=" glyphicon glyphicon-edit"></span>
-                Edit
-            </button>
-        </td>
-    </tr>
+﻿<table class="container">
+    <thead>
+        <tr>
+            <th><h1>ID</h1></th>
+            <th><h1>First Name</h1></th>
+            <th><h1>Last Name</h1></th>
+            <th><h1>Phone Number</h1></th>
+            <th><h1>Actions</h1></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="customer in customers">
+            <td>{{ customer.ID }}</td>
+            <td>{{ customer.FirstName }}</td>
+            <td>{{ customer.LastName }}</td>
+            <td>{{ customer.PhoneNumber }}</td>
+            <td>
+                <button ng-click="onEdit(customer)" class="btn btn-success">
+                    <span class=" glyphicon glyphicon-edit"></span>
+                    Edit
+                </button>
+            </td>
+        </tr>
+    </tbody>
 </table>

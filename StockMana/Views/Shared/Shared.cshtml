@@ -1,5 +1,7 @@
 ﻿<link rel="stylesheet" href="~/Content/bootstrap.css" />
 <link rel="stylesheet" href="~/Content/Site.css" />
+<link rel="stylesheet" href="~/Content/Content.css" />
+
 <script src="~/Views/Shared/layout.js"></script>
 <script src="~/Scripts/angular-1.4.8.js"></script>
 
@@ -18,7 +20,7 @@
 <script src="~/Views/Product/product-selector.js"></script>
 <script src="~/Views/Product/ProductSelector.html"></script>
 
-<sript src="~/APIServices/CurrencyManagementAPIService.js"></sript>
+<script src="~/APIServices/CurrencyManagementAPIService.js"></script>
 <script src="~/Views/Currency/CurrencyManagement.chtml"></script>
 <script src="~/Views/Currency/CurrencyManagementController.js"></script>
 <script src="~/Views/Currency/currency-grid.js"></script>
@@ -49,11 +51,35 @@
 <script src="~/Views/Customer/customer-selector.js"></script>
 <script src="~/Views/Customer/CustomerSelector.html"></script>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="~/Views/Customer/CustomerManagement.cshtml">Customers</a>
-    <a href="~/Views/Product/ProductManagement.cshtml">Products</a>
-    <a href="~/Views/Currency/CurrencyManagement.cshtml">Currencies</a>
-    <a href="~/Views/SellProducts/SellProductManagement.cshtml">Sell Products</a>
-    <div class="animation start-home"></div>
-</nav>
+@*<nav>
+        <a href="#">Home</a>
+        <a href="~/Views/Customer/CustomerManagement.cshtml">Customers</a>
+        <a href="~/Views/Product/ProductManagement.cshtml">Products</a>
+        <a href="~/Views/Currency/CurrencyManagement.cshtml">Currencies</a>
+        <a href="~/Views/SellProducts/SellProductManagement.cshtml">Sell Products</a>
+        <div class="animation start-home"></div>
+    </nav>*@
+
+<div class="demo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-default navbar-mobile bootsnav on">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+                            <li class="active"><a href="~/Views/Customer/CustomerManagement.cshtml" data-hover="Customers">Customers <span data-hover="Customers"></span></a></li>
+                            <li><a href="~/Views/Product/ProductManagement.cshtml" data-hover="Products">Products <span data-hover="Products"></span></a></li>
+                            <li><a href="~/Views/Currency/CurrencyManagement.cshtml" data-hover="Currencies">Currencies <span data-hover="Currencies"></span></a></li>
+                            <li><a href="~/Views/SellProducts/SellProductManagement.cshtml" data-hover="Sell Products">Sell Products <span data-hover="Sell Products"></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace StockMana.App_Start
+namespace MyWebProject.App_Start
 {
     public class RouteConfig
     {

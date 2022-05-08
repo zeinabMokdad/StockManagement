@@ -1,9 +1,9 @@
-﻿using StockMana.DataAccess;
-using StockMana.Entities;
+﻿using MyWebProject.DataAccess;
+using MyWebProject.Entities;
 using System;
 using System.Collections.Generic;
 
-namespace StockMana.Business
+namespace MyWebProject.Business
 {
     public class CustomerManager
     {

@@ -40,7 +40,6 @@ function CustomerEditorController($scope, $q, CustomerManagementAPIService) {
     function getCustomer(id) {
         return CustomerManagementAPIService.getCustomer(id).then(function (response) {
             customer = response.data;
-            console.log(customer);
             $scope.FirstName = customer.FirstName;
             $scope.LastName = customer.LastName;
             $scope.PhoneNumber = customer.PhoneNumber;

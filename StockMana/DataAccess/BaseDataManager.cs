@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.Common;
 using System.Linq;
 
-namespace StockMana.DataAccess
+namespace MyWebProject.DataAccess
 {
     public class BaseDataManager
     {

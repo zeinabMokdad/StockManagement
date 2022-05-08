@@ -1,10 +1,10 @@
-﻿using StockMana.Business;
-using StockMana.Entities;
+﻿using MyWebProject.Business;
+using MyWebProject.Entities;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Web.Http;
 
-namespace StockMana.Controllers
+namespace MyWebProject.Controllers
 {
     public class ProductController : ApiController
     {

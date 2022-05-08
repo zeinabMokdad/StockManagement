@@ -1,8 +1,8 @@
-﻿using StockMana.Entities;
+﻿using MyWebProject.Entities;
 using System.Collections.Generic;
 using System.Data;
 
-namespace StockMana.DataAccess
+namespace MyWebProject.DataAccess
 {
     public class ProductDataManager : BaseDataManager
     {

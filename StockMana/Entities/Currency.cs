@@ -1,4 +1,4 @@
-﻿namespace StockMana.Entities
+﻿namespace MyWebProject.Entities
 {
     public abstract class BaseCurrency
     {

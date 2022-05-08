@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Web.Http;
 
-namespace StockMana.App_Start
+namespace MyWebProject.App_Start
 {
     public static class WebApiConfig
     {

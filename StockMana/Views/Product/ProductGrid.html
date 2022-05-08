@@ -1,25 +1,29 @@
-﻿<table class="table table-striped">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Barcode</th>
-        <th>Quantity</th>
-        <th>Price</th>
-        <th>Currency</th>
-        <th>Actions</th>
-    </tr>
-    <tr ng-repeat="product in products">
-        <td>{{ product.ID }}</td>
-        <td>{{ product.Name }}</td>
-        <td>{{ product.Barcode }}</td>
-        <td>{{ product.Quantity }}</td>
-        <td>{{ product.Price }}</td>
-        <td>{{ product.CurrencyDescription }}</td>
-        <td>
-            <button ng-click="onEdit(product)" class="btn btn-success">
-                <span class=" glyphicon glyphicon-edit"></span>
-                Edit
-            </button>
-        </td>
-    </tr>
+﻿<table class="container">
+    <thead>
+        <tr>
+            <th><h1>ID</h1></th>
+            <th><h1>Name</h1></th>
+            <th><h1>Barcode</h1></th>
+            <th><h1>Quantity</h1></th>
+            <th><h1>Price</h1></th>
+            <th><h1>Currency</h1></th>
+            <th><h1>Actions</h1></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="product in products">
+            <td>{{ product.ID }}</td>
+            <td>{{ product.Name }}</td>
+            <td>{{ product.Barcode }}</td>
+            <td>{{ product.Quantity }}</td>
+            <td>{{ product.Price }}</td>
+            <td>{{ product.CurrencyDescription }}</td>
+            <td>
+                <button ng-click="onEdit(product)" class="btn btn-success">
+                    <span class=" glyphicon glyphicon-edit"></span>
+                    Edit
+                </button>
+            </td>
+        </tr>
+    </tbody>
 </table>

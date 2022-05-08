@@ -1,19 +1,23 @@
-﻿<table class="table table-striped">
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Symbol</th>
-        <th>Actions</th>
-    </tr>
-    <tr ng-repeat="currency in currencies">
-        <td>{{ currency.ID }}</td>
-        <td>{{ currency.Name }}</td>
-        <td>{{ currency.Symbol }}</td>
-        <td>
-            <button ng-click="onEdit(currency)" class="btn btn-success">
-                <span class=" glyphicon glyphicon-edit"></span>
-                Edit
-            </button>
-        </td>
-    </tr>
+﻿<table class="container">
+    <thead>
+        <tr>
+            <th><h1>ID</h1></th>
+            <th><h1>Name</h1></th>
+            <th><h1>Symbol</h1></th>
+            <th><h1>Actions</h1></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="currency in currencies">
+            <td>{{ currency.ID }}</td>
+            <td>{{ currency.Name }}</td>
+            <td>{{ currency.Symbol }}</td>
+            <td>
+                <button ng-click="onEdit(currency)" class="btn btn-success">
+                    <span class=" glyphicon glyphicon-edit"></span>
+                    Edit
+                </button>
+            </td>
+        </tr>
+    </tbody>
 </table>

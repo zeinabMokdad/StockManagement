@@ -1,25 +1,25 @@
 ﻿@inherits System.Web.WebPages.WebPage
 @RenderPage("~/Views/Shared/Shared.cshtml")
 
-<div ng-app="mainModule" ng-controller="CustomerManagementController" class="content-page">
-    <div class="form-group">
+<div ng-app="mainModule" ng-controller="CustomerManagementController">
+    <div class="container form-group" style="padding:0">
         <div class="row">
             <div class="col-lg-3">
-                <label>Customer Name</label>
+                <label class="filter">Customer Name</label>
                 <input type="text" name="CustomerName" ng-model="customerName" />
             </div>
             <div class="col-lg-3">
-                <label>Phone Number</label>
+                <label class="filter">Phone Number</label>
                 <input type="text" name="PhoneNumber" ng-model="phoneNumber" />
             </div>
             <div class="col-lg-3">
-                <button ng-click="onSearch()" class="btn btn-success">
+                <button ng-click="onSearch()" class="btn btn-success button-right">
                     <span class="glyphicon glyphicon-search"></span>
                     Search
                 </button>
             </div>
             <div class="col-lg-3">
-                <button ng-click="onAdd()" class="btn btn-success">
+                <button ng-click="onAdd()" class="btn btn-success button-right">
                     <span class="glyphicon glyphicon-plus"></span>
                     Add
                 </button>

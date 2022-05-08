@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace StockMana.Entities
+namespace MyWebProject.Entities
 {
     public abstract class BaseCustomerInvoice
     {

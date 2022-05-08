@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace StockMana.App_Start
+namespace MyWebProject.App_Start
 {
     public class FilterConfig
     {
